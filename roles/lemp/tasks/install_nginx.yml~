@@ -1,0 +1,8 @@
+- name: Install Nginx
+  apt: name={{ item }} state=present
+  with_items:
+   - nginx 
+
+- name: Configure Nginx
+  template: src=nginx.conf.template dest=/etc/nginx/nginx.conf
+  notify: restart nginx
