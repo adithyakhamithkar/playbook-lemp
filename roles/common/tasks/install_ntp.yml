@@ -1,0 +1,12 @@
+- apt: update_cache=yes
+- name: Install ntp
+  apt: name={{ item }} state=present
+  with_items:
+  - ntp
+
+- name: Configure ntp
+  template: src=ntp.conf.template dest=/etc/ntp.conf
+
+- name: Configure timezone
+  template: src=timezone.template dest=/etc/timezone
+  notify: restart ntp

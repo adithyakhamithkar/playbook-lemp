@@ -2,7 +2,7 @@
   apt: name={{ item }} state=present
   with_items:
    - nginx
-   - nginx-extras 
+   - nginx-extras
 
 - name: Configure Nginx
   template: src=nginx.conf.template dest=/etc/nginx/nginx.conf

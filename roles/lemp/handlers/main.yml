@@ -1,2 +1,5 @@
 - name: restart nginx
   service: name=nginx state=restarted
+
+- name: start automysqlbackup
+  service: name=automysqlbackup state=started
