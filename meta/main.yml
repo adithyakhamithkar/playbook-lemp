@@ -1,5 +1,0 @@
-- include: install_php.yml
-- include: install_nginx.yml
-- include: install_mysql.yml
-- include: install_automysqlbackup.yml
-- hostname: name=web01
