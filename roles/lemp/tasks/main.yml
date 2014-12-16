@@ -2,4 +2,5 @@
 - include: install_nginx.yml
 - include: install_mysql.yml
 - include: install_automysqlbackup.yml
+- include: install_postfix.yml
 - hostname: name=web01
