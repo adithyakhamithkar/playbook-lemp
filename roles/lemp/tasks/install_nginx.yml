@@ -7,3 +7,7 @@
 - name: Configure Nginx
   template: src=nginx.conf.template dest=/etc/nginx/nginx.conf
   notify: restart nginx
+
+- name: Configure Virtual host
+  template: src=virtualhost.template dest=/etc/nginx/sites-available/default
+  notify: restart nginx
