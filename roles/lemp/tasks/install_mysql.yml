@@ -5,4 +5,4 @@
    - mysql-client
   notify: start mysql
 
-#- shell: mysqladmin -u root -pnewpassword password “newpassword”
+- command: mysqladmin -u root -p password "{{ setmysqlrootpassword }}"
