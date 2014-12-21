@@ -1,2 +1,5 @@
 [webserver]
+#Running as root user
 web-01 ansible_ssh_host=192.168.0.11 ansible_ssh_user=root sethostname=localwebserver setmysqlrootpassword=pass
+#Running as sudo user
+web-02 ansible_ssh_host=192.168.0.103 ansible_ssh_user=user_name ansible_sudo_pass='password' sethostname=web-02 setmysqlrootpassword=pass
